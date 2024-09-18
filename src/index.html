@@ -12,16 +12,19 @@
           <label for="uname">User name:</label>
           <input type="text" name="uname" id="uname" required  placeholder="ex: a.a2s" pattern="^[a-z]\.[a-z0-9]{3,}$" >
           <span class="error" aria-live="polite"></span>
+          <span class="valid" id="uNameValid" aria-live="polite"></span>
         </li>
         <li>
           <label for="email">Email address:</label>
           <input type="email" name="email" id="email" placeholder="ex: mail@bgcorp.eu" required pattern="^[a-zA-Z0-9]+@bigcorp\.eu$">
           <span class="error" aria-live="polite"></span>
+          <span class="valid" id="emailValid" aria-live="polite"></span>
         </li>
         <li>
           <label for="phone">Phone number:</label>
           <input type="tel" name="phone" id="phone" required placeholder="ex: 123-123-1233"  pattern="^\d{10}$|^\d{3}([.\- ]?)\d{3}\1\d{4}$">
           <span class="error" aria-live="polite"></span>
+          <span class="valid" id="pValid" aria-live="polite"></span>
         </li>
         <li>
           <textarea name="comment" id="comment" required>

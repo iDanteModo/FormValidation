@@ -32,20 +32,17 @@ img {
 
 * {
   color-scheme: dark;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--fontColor);
+  color: whitesmoke;
   font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 form {
@@ -58,6 +55,8 @@ form {
 
 form h2 {
   text-align: center;
+  font-size: 2rem;
+  font-family: monospace;
 }
 
 ul {
@@ -76,8 +75,18 @@ li {
 }
 
 input:invalid {
-  border-color: red;
-  background-color: darkgreen;
+  border: 1px red solid;
+  
+}
+
+input:valid {
+  border: 1px green solid;
+  outline: none;
+}
+
+.valid { 
+  font-size: 0.8rem;
+  color: green;
 }
 
 input:focus:invalid {
@@ -88,6 +97,6 @@ input:focus:invalid {
   width: 100%;
   padding: 0;
   font-size: 0.8rem;
-  color: wheat;
-  border-radius: 0 0 5px 5px;
+  color: whitesmoke;
+  border-radius: 0 0 3px 3px;
 }
