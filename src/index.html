@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title </title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-        </nav>
-    </header>
-    <div id="content">
-    </div>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 2</title>
+  </head>
+  <body>
+    <form novalidate>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input type="text" name="uname" id="uname" required  placeholder="ex: a.a2s" pattern="^[a-z]\.[a-z0-9]{3,}$" >
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input type="email" name="email" id="email" placeholder="ex: mail@bgcorp.eu" required pattern="^[a-zA-Z0-9]+@bigcorp\.eu$">
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="tel" name="phone" id="phone" required placeholder="ex: 123-123-1233"  pattern="^\d{10}$|^\d{3}([.\- ]?)\d{3}\1\d{4}$">
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <textarea name="comment" id="comment" required>
+          </textarea>
+        </li>
+        <li>
+          <button id="submit">Submit comment</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+
 </html>
